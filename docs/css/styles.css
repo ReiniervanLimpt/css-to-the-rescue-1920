@@ -52,6 +52,7 @@ svg:nth-child(2):hover > path{
 }
 
 #triangle_bottom{
+  background-color: teal;
   display: flex;
   justify-content: center;
 }
