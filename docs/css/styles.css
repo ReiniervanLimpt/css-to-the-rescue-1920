@@ -2,34 +2,162 @@
   fill:#FFFFFF;
 }
 
-div{
-  width: 20%;
-}
-
 svg{
   position:relative;
+  width: 30%;
+  display: block;
+}
+
+.noBasicWrapper:hover{
+  position: relative;
+  back
 }
 
 .noBasicWrapper{
-  position: relative;
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: center;
 }
 
-.toLeft{
-  animation: rotateElement 2s ease alternate infinite;
-  animation-delay: 1.5s;
+g{
+  animation: rotateElement 5s ease alternate infinite;
+}
+g:nth-child(2) {
+  animation-delay: 0.3s;
+}
+g:nth-child(3){
+  animation: rotateElement 10s ease normal infinite;
+  animation-delay: 0.2s;
+}
+g:nth-child(4){
+  animation-delay: 0.3s;
+}
+g:nth-child(5){
+  animation: hideElement 4s ease alternate infinite;
+  animation-delay: 0.4s;
 }
 
-.toRight{
-  animation: rotateElement 4s ease alternate-reverse infinite;
-  animation-delay: 1.5s;
+path{
+
+  stroke: #000000;
+  stroke-width: 80;
+/*  animation-name: out;  */
+  animation-duration:2s;
 }
 
-.center{
-  animation: scaleElement 6s ease alternate-reverse infinite;
-  animation-delay: 2s;
+svg:nth-child(2):hover > path{
+  animation-play-state: paused;
+  animation: in 4s ease forwards;
 }
 
-@keyframes scaleElement{
+#triangle_bottom{
+  display: flex;
+  justify-content: center;
+}
+
+#triangle_bottom:hover path:nth-child(1) {
+  d: path("M334,118.8 395.3,135.9 429.5,111.7 352.6,63.3");
+  fill: #86603a;
+}
+
+#triangle_bottom:hover path:nth-child(2) {
+  d: path("M248.5,118.8 334,118.8 352.6,63.3 275.6,81.8");
+  fill: #7f7e49;
+}
+
+#triangle_bottom:hover path:nth-child(3) {
+  d: path("M415.3,121.7 465.1,148.8 408.1,148.8 395.3,135.9");
+  fill: #704d3d;
+}
+
+#triangle_bottom:hover path:nth-child(4) {
+  d: path("M372.5,157.3 399.6,165.9 458,148.8 406.7,147.3");
+  fill: #33201a;
+}
+
+#triangle_bottom:hover path:nth-child(5) {
+  d: path("M248.5,118.8 178.7,163 150.2,248.5 281.3,188.7");
+  fill: #fd721b;
+}
+
+#triangle_bottom:hover path:nth-child(6) {
+  d: path("M248.5,118.8 281.3,188.7 341.2,208.6 399.6,165.95");
+  fill: #8b5992;
+}
+
+#triangle_bottom:hover path:nth-child(7) {
+  d: path("M406.7,147.3 395.3,135.9 334,118.8 248.5,118.8");
+  fill: #603127;
+}
+
+#triangle_bottom:hover path:nth-child(8) {
+  d: path("M248.5,118.8 372.5,157.3 406.7,147.3 344,133.1");
+  fill: #b14045;
+}
+
+#triangle_bottom:hover path:nth-child(9) {
+  d: path("M150.2,248.5 63.3,319.8 191.5,319.8 281.3,188.7");
+  fill: #2e5d64;
+}
+
+#triangle_bottom:hover path:nth-child(10) {
+  d: path("M191.5,319.8 359.7,341.2 341.2,208.6 281.3,188.7");
+  fill: #c35c5f;
+}
+
+#triangle_bottom:hover path:nth-child(11) {
+  d: path("M399.6,165.9 436.6,238.5 359.7,341.2 341.2,208.6");
+  fill: #8b5e9b;
+}
+
+#triangle_bottom:hover path:nth-child(12) {
+  d: path("M359.7,341.2 252.8,369.7 178.7,341.2 191.5,319.8");
+  fill: #267584;
+}
+
+#triangle_bottom:hover path:nth-child(13) {
+  d: path("M106,319.8 9.1,399.6 150.2,344 191.5,319.8");
+  fill: #373696;
+}
+
+#triangle_bottom:hover path:nth-child(14) {
+  d: path("M191.5,319.8 150.2,344 48.4,426.9 178.7,341.2");
+  fill: #024649;
+}
+
+svg path{
+  transition: 0.5s ease-out;
+}
+
+#triangle_bottom path{
+  stroke: none;
+  fill:
+}
+
+@keyframes in{
+  from{
+    stroke-width: 80;
+    stroke-dasharray: 9;
+    } to {
+    stroke-width: 4;
+    stroke-dashoffset: 500;
+    stroke-dasharray: 10;
+  }
+}
+
+@keyframes out{
+  from{
+    stroke-width: 4;
+    stroke-dashoffset: 500;
+    stroke-dasharray: 10;
+    } to {
+    stroke-width: 80;
+    stroke-dasharray: 9;
+  }
+}
+
+@keyframes hideElement{
   8% { opacity: 0; }
   10% { opacity: 1; }
   85% { opacity: 1; }
@@ -45,9 +173,9 @@ svg{
     transform: rotate(0deg);
   }60%{
     transform: rotate(0deg);
-  }63%{
-    transform: rotate(-4deg);
   }65%{
+    transform: rotate(-4deg);
+  }72%{
     transform: rotate(3deg);
   }67%{
     transform: rotate(0deg);
@@ -56,10 +184,10 @@ svg{
   }96%{
     transform: rotate(0deg);
   }97%{
-    transform: rotate(24deg);
+    transform: rotate(-11deg);
   }98%{
     transform: rotate(0deg);
   }to{
-    transform: rotate(36deg);
+    transform: rotate(0deg);
   }
 }
