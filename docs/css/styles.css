@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .st0 {
@@ -219,6 +220,74 @@ svg path{
   }
 }
 
+input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+
+li{
+  font-size: 3em;
+  padding-left: 2em;
+}
+
+li:first-child{
+  padding-left: 0em;
+  font-size: 3em;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  color: white;
+  justify-content: center;
+}
+
+#nice{
+  stroke: none;
+  fill:none;
+  /* fill:#00ff06 */
+  /* fill:#0c00ff; */
+}
+
+input{
+  color: white;
+}
+
+label {
+  padding: 1em;
+  margin: 1em;
+  color: white;
+  font-size: 1.2em;
+}
+
+input:nth-of-type(1):checked ~ div:first-of-type svg g #nice {
+  fill: none;
+}
+
+input:nth-of-type(2):checked ~ div:first-of-type svg g #nice {
+  fill: red;
+}
+
+input:nth-of-type(3):checked ~ div:first-of-type svg g #nice {
+  fill: #00ff06;
+}
+
+input:nth-of-type(4):checked ~ div:first-of-type svg g #nice {
+  fill: blue;
+}
+
+input:nth-of-type(5):checked ~ div:first-of-type svg g #nice {
+  fill: cyan;
+}
+
+input:nth-of-type(6):checked ~ div:first-of-type svg g #nice {
+  fill: magenta;
+}
+
+input:nth-of-type(7):checked ~ div:first-of-type svg g #nice {
+  fill: yellow;
+}
+
 #bars svg{
   width:50%;
   height:100%;
@@ -239,22 +308,15 @@ svg path{
   position: absolute;
   width: 100%;
   left: -25%;
-  animation: moveElement 10s linear alternate infinite;
+  animation: moveElement 15s linear alternate infinite;
 }
 
 #wrapper{
-
+  text-align: center;
 }
 
 @keyframes moveElement {
   to {
-    left: 25%;
+    left: 75%;
   }
-}
-
-#nice{
-  stroke: none;
-  fill:none;
-  /* fill:#00ff06 */
-  /* fill:#0c00ff; */
 }
