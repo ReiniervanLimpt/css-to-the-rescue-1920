@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 .st0 {
   fill:#FFFFFF;
 }
@@ -10,7 +14,6 @@ svg{
 
 .noBasicWrapper:hover{
   position: relative;
-  back
 }
 
 .noBasicWrapper{
@@ -20,20 +23,20 @@ svg{
   justify-content: center;
 }
 
-g{
+#letterN g{
   animation: rotateElement 5s ease alternate infinite;
 }
-g:nth-child(2) {
+#letterN g:nth-child(2) {
   animation-delay: 0.3s;
 }
-g:nth-child(3){
+#letterN g:nth-child(3){
   animation: rotateElement 10s ease normal infinite;
   animation-delay: 0.2s;
 }
-g:nth-child(4){
+#letterN g:nth-child(4){
   animation-delay: 0.3s;
 }
-g:nth-child(5){
+#letterN g:nth-child(5){
   animation: hideElement 4s ease alternate infinite;
   animation-delay: 0.4s;
 }
@@ -52,89 +55,112 @@ svg:nth-child(2):hover > path{
 }
 
 #triangle_bottom{
-  background-color: teal;
+  width:82%;
   display: flex;
   justify-content: center;
 }
 
 #triangle_bottom:hover path:nth-child(1) {
   d: path("M334,118.8 395.3,135.9 429.5,111.7 352.6,63.3");
-  fill: #86603a;
+  fill: #cccccc;
 }
 
 #triangle_bottom:hover path:nth-child(2) {
   d: path("M248.5,118.8 334,118.8 352.6,63.3 275.6,81.8");
-  fill: #7f7e49;
+  fill: #808080;
 }
 
 #triangle_bottom:hover path:nth-child(3) {
   d: path("M415.3,121.7 465.1,148.8 408.1,148.8 395.3,135.9");
-  fill: #704d3d;
+  fill: #f2f2f2;
 }
 
 #triangle_bottom:hover path:nth-child(4) {
   d: path("M372.5,157.3 399.6,165.9 458,148.8 406.7,147.3");
-  fill: #33201a;
+  fill: #e6e6e6;
 }
 
 #triangle_bottom:hover path:nth-child(5) {
   d: path("M248.5,118.8 178.7,163 150.2,248.5 281.3,188.7");
-  fill: #fd721b;
+  fill: #e6e6e6;
 }
 
 #triangle_bottom:hover path:nth-child(6) {
   d: path("M248.5,118.8 281.3,188.7 341.2,208.6 399.6,165.95");
-  fill: #8b5992;
+  fill: #b3b3b3;
 }
 
 #triangle_bottom:hover path:nth-child(7) {
   d: path("M406.7,147.3 395.3,135.9 334,118.8 248.5,118.8");
-  fill: #603127;
+  fill: #999999;
 }
 
 #triangle_bottom:hover path:nth-child(8) {
   d: path("M248.5,118.8 372.5,157.3 406.7,147.3 344,133.1");
-  fill: #b14045;
+  fill: #cccccc;
 }
 
 #triangle_bottom:hover path:nth-child(9) {
   d: path("M150.2,248.5 63.3,319.8 191.5,319.8 281.3,188.7");
-  fill: #2e5d64;
+  fill: #b3b3b3;
 }
 
 #triangle_bottom:hover path:nth-child(10) {
   d: path("M191.5,319.8 359.7,341.2 341.2,208.6 281.3,188.7");
-  fill: #c35c5f;
+  fill: #808080;
 }
 
 #triangle_bottom:hover path:nth-child(11) {
   d: path("M399.6,165.9 436.6,238.5 359.7,341.2 341.2,208.6");
-  fill: #8b5e9b;
+  fill: #e6e6e6;
 }
 
 #triangle_bottom:hover path:nth-child(12) {
   d: path("M359.7,341.2 252.8,369.7 178.7,341.2 191.5,319.8");
-  fill: #267584;
+  fill: #cccccc;
 }
 
 #triangle_bottom:hover path:nth-child(13) {
   d: path("M106,319.8 9.1,399.6 150.2,344 191.5,319.8");
-  fill: #373696;
+  fill: #f2f2f2;
 }
 
 #triangle_bottom:hover path:nth-child(14) {
   d: path("M191.5,319.8 150.2,344 48.4,426.9 178.7,341.2");
-  fill: #024649;
+  fill: #4d4d4d;
 }
 
 svg path{
-  transition: 0.5s ease-out;
+  transition: 1.5s ease-out;
 }
 
 #triangle_bottom path{
   stroke: none;
   fill:
 }
+
+@keyframes flash{
+  from{
+    background-color: black;
+  } 50% {
+    background-color: black;
+  } 51% {
+    background-color: white;
+  } 52% {
+    background-color: black;
+  } 54% {
+    background-color: black;
+  } 55% {
+    background-color: white;
+  } 56% {
+    background-color: black;
+  } 57% {
+    background-color: white;
+  } 58% {
+    background-color: black;
+  }
+}
+
 
 @keyframes in{
   from{
@@ -191,4 +217,44 @@ svg path{
   }to{
     transform: rotate(0deg);
   }
+}
+
+#bars svg{
+  width:50%;
+  height:100%;
+}
+
+#bal img{
+  width: 200%;
+  mix-blend-mode: multiply;
+}
+
+#bal{
+ width:25%;
+ left: 25%;
+ position: absolute;
+}
+
+#bars{
+  position: absolute;
+  width: 100%;
+  left: -25%;
+  animation: moveElement 10s linear alternate infinite;
+}
+
+#wrapper{
+
+}
+
+@keyframes moveElement {
+  to {
+    left: 25%;
+  }
+}
+
+#nice{
+  stroke: none;
+  fill:none;
+  /* fill:#00ff06 */
+  /* fill:#0c00ff; */
 }
