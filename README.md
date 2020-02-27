@@ -6,12 +6,11 @@ In this three week course you are going to create an innovative, experimantal, y
 
 ## Which properties did i explore:
 
-Position:
-Visibility:
-Keyframe Animations:
-Transition:
-Morphs SVG shapes and outlines:
-Mix-blend-modes:
-Writing modes:
-Filters:
-
+* Position: played around with radio buttons and their labels.
+* Visibility: 
+* Keyframe Animations: SVG animations on morphs on shapes and outlines.
+* Transition: 
+* Morphs SVG shapes and outlines: 
+* Mix-blend-modes: Explored the use of blend modes with SVG's
+* Writing modes:
+* Filters:
