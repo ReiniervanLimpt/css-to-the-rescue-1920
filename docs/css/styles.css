@@ -22,22 +22,23 @@ svg{
   flex-wrap: wrap;
   align-items:center;
   justify-content: center;
+  margin-bottom: 170px;
 }
 
-#letterN g{
+svg[id=letterN] g{
   animation: rotateElement 5s ease alternate infinite;
 }
-#letterN g:nth-child(2) {
+svg[id=letterN] g:nth-child(2) {
   animation-delay: 0.3s;
 }
-#letterN g:nth-child(3){
+svg[id=letterN] g:nth-child(3){
   animation: rotateElement 10s ease normal infinite;
   animation-delay: 0.2s;
 }
-#letterN g:nth-child(4){
+svg[id=letterN] g:nth-child(4){
   animation-delay: 0.3s;
 }
-#letterN g:nth-child(5){
+svg[id=letterN] g:nth-child(5){
   animation: hideElement 4s ease alternate infinite;
   animation-delay: 0.4s;
 }
@@ -55,78 +56,78 @@ svg:nth-child(2):hover > path{
   animation: in 4s ease forwards;
 }
 
-#triangle_bottom{
+div[id=triangle_bottom]{
   width:82%;
   display: flex;
   justify-content: center;
 }
 
-#triangle_bottom:hover path:nth-child(1) {
+div[id=triangle_bottom]:hover path:nth-child(1) {
   d: path("M334,118.8 395.3,135.9 429.5,111.7 352.6,63.3");
   fill: #cccccc;
 }
 
-#triangle_bottom:hover path:nth-child(2) {
+div[id=triangle_bottom]:hover path:nth-child(2) {
   d: path("M248.5,118.8 334,118.8 352.6,63.3 275.6,81.8");
   fill: #808080;
 }
 
-#triangle_bottom:hover path:nth-child(3) {
+div[id=triangle_bottom]:hover path:nth-child(3) {
   d: path("M415.3,121.7 465.1,148.8 408.1,148.8 395.3,135.9");
   fill: #f2f2f2;
 }
 
-#triangle_bottom:hover path:nth-child(4) {
+div[id=triangle_bottom]:hover path:nth-child(4) {
   d: path("M372.5,157.3 399.6,165.9 458,148.8 406.7,147.3");
   fill: #e6e6e6;
 }
 
-#triangle_bottom:hover path:nth-child(5) {
+div[id=triangle_bottom]:hover path:nth-child(5) {
   d: path("M248.5,118.8 178.7,163 150.2,248.5 281.3,188.7");
   fill: #e6e6e6;
 }
 
-#triangle_bottom:hover path:nth-child(6) {
+div[id=triangle_bottom]:hover path:nth-child(6) {
   d: path("M248.5,118.8 281.3,188.7 341.2,208.6 399.6,165.95");
   fill: #b3b3b3;
 }
 
-#triangle_bottom:hover path:nth-child(7) {
+div[id=triangle_bottom]:hover path:nth-child(7) {
   d: path("M406.7,147.3 395.3,135.9 334,118.8 248.5,118.8");
   fill: #999999;
 }
 
-#triangle_bottom:hover path:nth-child(8) {
+div[id=triangle_bottom]:hover path:nth-child(8) {
   d: path("M248.5,118.8 372.5,157.3 406.7,147.3 344,133.1");
   fill: #cccccc;
 }
 
-#triangle_bottom:hover path:nth-child(9) {
+div[id=triangle_bottom]:hover path:nth-child(9) {
   d: path("M150.2,248.5 63.3,319.8 191.5,319.8 281.3,188.7");
   fill: #b3b3b3;
 }
 
-#triangle_bottom:hover path:nth-child(10) {
+div[id=triangle_bottom]:hover path:nth-child(10) {
   d: path("M191.5,319.8 359.7,341.2 341.2,208.6 281.3,188.7");
   fill: #808080;
 }
 
-#triangle_bottom:hover path:nth-child(11) {
+div[id=triangle_bottom]:hover path:nth-child(11) {
   d: path("M399.6,165.9 436.6,238.5 359.7,341.2 341.2,208.6");
   fill: #e6e6e6;
 }
 
-#triangle_bottom:hover path:nth-child(12) {
+div[id=triangle_bottom]:hover path:nth-child(12) {
   d: path("M359.7,341.2 252.8,369.7 178.7,341.2 191.5,319.8");
   fill: #cccccc;
 }
 
-#triangle_bottom:hover path:nth-child(13) {
+div[id=triangle_bottom]:hover path:nth-child(13) {
   d: path("M106,319.8 9.1,399.6 150.2,344 191.5,319.8");
   fill: #f2f2f2;
 }
 
-#triangle_bottom:hover path:nth-child(14) {
+div[id=triangle_bottom]:hover path:nth-child(14) {
   d: path("M191.5,319.8 150.2,344 48.4,426.9 178.7,341.2");
   fill: #4d4d4d;
 }
@@ -135,7 +136,7 @@ svg path{
   transition: 1.5s ease-out;
 }
 
-#triangle_bottom path{
+div[id=triangle_bottom] path{
   stroke: none;
   fill:
 }
@@ -242,7 +243,7 @@ ul{
   justify-content: center;
 }
 
-#nice{
+path[id=nice]{
   stroke: none;
   fill:none;
   /* fill:#00ff06 */
@@ -254,65 +255,128 @@ input{
 }
 
 label {
+  position:absolute;
+  font-family: 'Oxanium';
   padding: 1em;
-  margin: 1em;
+  top: -8em;
+  margin-left: 0%;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  writing-mode: vertical-rl;
+  opacity: 0.5;
+  filter: blur(4px);
+  transition: filter 1.5s linear, color 1.5s linear, transform 1.5s linear, opacity 1.5s linear;
 }
 
-input:nth-of-type(1):checked ~ div:first-of-type svg g #nice {
+input:nth-of-type(1):checked ~ div:first-of-type svg g path[id=nice] {
   fill: none;
 }
 
-input:nth-of-type(2):checked ~ div:first-of-type svg g #nice {
+input:nth-of-type(2):checked ~ div:first-of-type svg g path[id=nice] {
   fill: red;
 }
 
-input:nth-of-type(3):checked ~ div:first-of-type svg g #nice {
+input:nth-of-type(3):checked ~ div:first-of-type svg g path[id=nice] {
   fill: #00ff06;
 }
 
-input:nth-of-type(4):checked ~ div:first-of-type svg g #nice {
+input:nth-of-type(4):checked ~ div:first-of-type svg g path[id=nice] {
   fill: blue;
 }
 
-input:nth-of-type(5):checked ~ div:first-of-type svg g #nice {
-  fill: cyan;
+
+input:nth-of-type(1):checked ~ label:nth-of-type(1){
+  transform: rotate(-90deg);
+  filter: blur(0px);
+  background: -webkit-linear-gradient(cyan, magenta, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
-input:nth-of-type(6):checked ~ div:first-of-type svg g #nice {
-  fill: magenta;
+input:nth-of-type(2):checked ~ label:nth-of-type(2){
+  transform: rotate(-90deg);
+  filter: blur(0px);
+  color: red;
+  opacity: 1;
 }
 
-input:nth-of-type(7):checked ~ div:first-of-type svg g #nice {
-  fill: yellow;
+input:nth-of-type(3):checked ~ label:nth-of-type(3){
+  transform: rotate(-90deg);
+  filter: blur(0px);
+  color: #00ff06;
+  opacity: 1;
 }
 
-#bars svg{
+input:nth-of-type(4):checked ~ label:nth-of-type(4){
+  transform: rotate(-90deg);
+  filter: blur(0px);
+  color: blue;
+  opacity: 1;
+}
+
+label:nth-of-type(1){
+  z-index: -5;
+  left: 47.5%;
+}
+
+label:nth-of-type(2){
+  z-index: -6;
+  left: 47.5%;
+}
+
+label:nth-of-type(3){
+  z-index: -7;
+  left: 47.5%;
+}
+
+label:nth-of-type(4){
+  z-index: -8;
+  left: 47.5%;
+}
+
+input:nth-of-type(1):checked ~ label:nth-of-type(2){
+  z-index: 1;
+}
+
+input:nth-of-type(2):checked ~ label:nth-of-type(3){
+  z-index: 1;
+}
+
+input:nth-of-type(3):checked ~ label:nth-of-type(4){
+  z-index: 1;
+}
+
+input:nth-of-type(4):checked ~ label:nth-of-type(4){
+  z-index: -8;
+}
+
+div[id=bars] svg{
   width:50%;
   height:100%;
 }
 
-#bal img{
+div[id=bal] img{
   width: 200%;
   mix-blend-mode: multiply;
 }
 
-#bal{
+div[id=bal]{
  width:25%;
  left: 25%;
  position: absolute;
 }
 
-#bars{
+div[id=bars]{
   position: absolute;
   width: 100%;
   left: -25%;
   animation: moveElement 15s linear alternate infinite;
 }
 
-#wrapper{
+div[id=wrapper]{
   text-align: center;
+  position: relative;
 }
 
 @keyframes moveElement {
